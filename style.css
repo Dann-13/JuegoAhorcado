@@ -1,0 +1,87 @@
+body{
+    background-color: #EFF1FA;
+    margin: 0px;
+}
+.contenedorBotones {
+    width: 80%;
+    position: absolute;
+	height: 150px;
+	left: 50%;
+	top: 50%;
+	margin-top: -100px;
+	margin-left: -150px;
+}
+
+.botoninicio {
+    background-color: #0A3871;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+
+}
+
+.botonagregar {
+    border: 0;
+    color: #0A3871;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+}
+
+#contenido-oculto {
+    display: none;
+}
+#imagen-ahorcado{
+    width: 50%;
+    margin: 0 auto;
+}
+.img{
+    height: 450px;
+}
+#botonPalabra{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.botonobtenerpalabra{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+.palabras{
+    width: 50%;
+    margin: 0 auto;
+}
+#palabraAdivinar{
+    text-align: center;
+    height: 3em;
+    font-size: 25px;
+}
+#palabraAdivinar span{
+    vertical-align: bottom;
+    font-size: 2em;
+    border-bottom: 2px solid #0A3871;
+    width: 30px;
+    text-align: center;
+    margin-right: 6px;
+    display: inline-block;
+    text-align: center;
+}
+.botones{
+    width: 50%;
+    margin: 0 auto;
+}
+#letras{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#letras button{
+    width: 28px;
+    padding: 10px 10px;
+    font-size: 20px;
+}
