@@ -23,15 +23,18 @@ const img = id('imagen');
 function mostrarContenido() {
     document.getElementById('contenido-oculto').style.display = 'block';
     document.getElementById('contenedor-Botones').style.display = 'none';
+    
 }
 botonIniciar.addEventListener("click", function (event) {
     mostrarContenido();
+    btn_letras.disabled = true;
 });
 
 //Click en obtener Palabra O Iniciar Juego
 botonPalabra.addEventListener("click", function (event) {
     imagen.src = 'img/img0.svg';
     botonPalabra.disabled = true;
+    console.log(botonPalabra)
     cantidadErrores = 0; //para que cada vez que vuelva a jugar inicie en 0
     cantidadAciertos = 0;
     var parrafo = id("palabraAdivinar");
@@ -45,7 +48,7 @@ botonPalabra.addEventListener("click", function (event) {
 
     var cantidad_letras = palabrita.length;
     for (let i = 0; i < btn_letras.length; i++) { //servira para habilitar las letras cada ves que le demos click a obtener palabra
-        btn_letras[i].disabled=false;
+        btn_letras[i].disabled = false;
     }
     for (let i = 0; i < cantidad_letras; i++) {
         var span = document.createElement('span');
@@ -81,21 +84,55 @@ function click_letras(event) {
         img.src = source;
 
     }
-    if (cantidadErrores == 7){
-        id('resultado').innerHTML = "Perdiste la palabra era " + palabrita;
+    if (cantidadErrores == 7) {
+        id('mensajeResultado').innerHTML = "Perdiste la palabra secreta era " + palabrita;
+        id('frase').innerHTML = "Si la vida no te sonrie, Agregale mas Fruta";
         botonPalabra.disabled = false;
+        ventana()
         finalizarJuego()
-    }else if(cantidadAciertos == palabrita.length){
-        id('resultado').innerHTML = "Ganaste";
+    } else if (cantidadAciertos == palabrita.length) {
         botonPalabra.disabled = false;
+        id('mensajeResultado').innerHTML = "¡Felicidades Ganaste!";
+        id('frase').innerHTML = "Se como una fruta, bella por fuera saludable por dentro";
+        ventana()
         finalizarJuego()
     }
     console.log("la letra " + letra + " en la palabra " + "¿Existe? " + acerto);
 }
 //para finalizar juego
-function finalizarJuego(){
+function finalizarJuego() {
     for (let i = 0; i < btn_letras.length; i++) {
-        btn_letras[i].disabled=true;//si perdio o gano igual desabilita los botones para no seguir escribiendo
+        btn_letras[i].disabled = true;//si perdio o gano igual desabilita los botones para no seguir escribiendo
     }
     botonPalabra.disabled = false; //cuando termine el juego que me habilite obtener palabra
+}
+//Funcion Ganaste ventana de Ganaste
+function ventana() {
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var body = document.getElementsByTagName("body")[0];
+
+    modal.style.display = "block";
+    body.style.position = "static";
+    body.style.height = "100%";
+    body.style.overflow = "hidden";
+
+
+    span.onclick = function () {
+        modal.style.display = "none";
+
+        body.style.position = "inherit";
+        body.style.height = "auto";
+        body.style.overflow = "visible";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
+    }
 }
