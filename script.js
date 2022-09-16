@@ -12,7 +12,12 @@ var palabras = [
     'manzana',
     'kiwi',
     'naranja',
-    'sandia'
+    'sandia',
+    'piña',
+    'limon',
+    'mora',
+    'guayaba',
+    'papaya'
 ];
 var botonIniciar = document.querySelector('#iniciarjuego');
 var botonPalabra = document.querySelector('#botonPalabra');

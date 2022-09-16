@@ -18,7 +18,8 @@ body{
     font-size: 20px;
     border-radius: 15px;
     padding: 10px 30px 10px 30px;
-
+    font-family: 'Akaya Telivigala', cursive;
+    cursor: pointer;
 }
 
 .botonagregar {
@@ -27,6 +28,9 @@ body{
     font-size: 20px;
     border-radius: 15px;
     padding: 10px 30px 10px 30px;
+    font-family: 'Akaya Telivigala', cursive;
+    cursor: pointer;
+
 }
 
 #contenido-oculto {
@@ -37,12 +41,20 @@ body{
     margin: 0 auto;
 }
 .img{
-    height: 450px;
+    height: 400px;
 }
 #botonPalabra{
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
+    transition: all 1s ease;
+    font-family: 'Akaya Telivigala', cursive;
+    cursor: pointer;
+
+}
+.botonPalabraclass:hover{
+    background-color: #0A3871;
+    color: #fff;
 }
 .botonobtenerpalabra{
     margin: 0 auto;
@@ -80,7 +92,6 @@ body{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
 
@@ -91,6 +102,7 @@ body{
     border: 1px solid lightgray;
     border-top: 10px solid #0A3871;
     width: 60%;
+    border-radius: 15px;
 }
 
 .modalContainer .close {
@@ -99,7 +111,9 @@ body{
     font-size: 28px;
     font-weight: bold;
 }
-
+#mensajeResultado{
+    text-align: center;
+}
 .modalContainer .close:hover,
 .modalContainer .close:focus {
     color: #000;
@@ -120,7 +134,9 @@ body{
     margin-bottom: 50px;
 }
 #letras button{
-    width: 28px;
     padding: 10px 10px;
     font-size: 20px;
+    font-family: 'Akaya Telivigala', cursive;
+    cursor: pointer;
+
 }
