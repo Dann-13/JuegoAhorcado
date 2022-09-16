@@ -20,8 +20,14 @@ body{
     padding: 10px 30px 10px 30px;
     font-family: 'Akaya Telivigala', cursive;
     cursor: pointer;
-}
+    transition: all 1s ease;
 
+}
+.botoninicio:hover{
+    background-color: #fff;
+    color: #0A3871;
+    border-color: #0A3871;
+}
 .botonagregar {
     border: 0;
     color: #0A3871;
@@ -30,7 +36,11 @@ body{
     padding: 10px 30px 10px 30px;
     font-family: 'Akaya Telivigala', cursive;
     cursor: pointer;
-
+    transition: all 1s ease;
+}
+.botonagregar:hover{
+    background-color: #0A3871;
+    color: #fff;
 }
 
 #contenido-oculto {
@@ -113,6 +123,10 @@ body{
 }
 #mensajeResultado{
     text-align: center;
+    font-family: 'Akaya Telivigala', cursive;
+}
+#frase{
+    font-family: 'Akaya Telivigala', cursive;
 }
 .modalContainer .close:hover,
 .modalContainer .close:focus {

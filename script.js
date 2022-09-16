@@ -26,15 +26,13 @@ const img = id('imagen');
 
 //mostrando el juego
 function mostrarContenido() {
-    document.getElementById('contenido-oculto').style.display = 'block';
-    document.getElementById('contenedor-Botones').style.display = 'none';
-    
+    id('contenido-oculto').style.display = 'block';
+    id('contenedor-Botones').style.display = 'none';
 }
 botonIniciar.addEventListener("click", function (event) {
     mostrarContenido();
     btn_letras.disabled = true;
 });
-
 //Click en obtener Palabra O Iniciar Juego
 botonPalabra.addEventListener("click", function (event) {
     imagen.src = 'img/img0.svg';
@@ -90,7 +88,7 @@ function click_letras(event) {
 
     }
     if (cantidadErrores == 7) {
-        id('mensajeResultado').innerHTML = "Perdiste la palabra secreta era " + palabrita;
+        id('mensajeResultado').innerHTML = "¡Perdiste!, la palabra secreta era " + palabrita;
         id('frase').innerHTML = "Si la vida no te sonrie, Agregale mas Fruta";
         botonPalabra.disabled = false;
         ventana()
@@ -113,7 +111,7 @@ function finalizarJuego() {
 }
 //Funcion Ganaste ventana de Ganaste
 function ventana() {
-    var modal = document.getElementById("myModal");
+    var modal = id("myModal");
     var span = document.getElementsByClassName("close")[0];
     var body = document.getElementsByTagName("body")[0];
 
