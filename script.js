@@ -22,6 +22,8 @@ var palabras = [
 var botonIniciar = document.querySelector('#iniciarjuego');
 var botonPalabra = document.querySelector('#botonPalabra');
 var btn_letras = document.querySelectorAll("#letras button");
+var btn_agregarPalabra = document.querySelector('#agregar');
+var botonAgregarPVentana = document.querySelector('#agregar')
 const img = id('imagen');
 
 //mostrando el juego
@@ -91,6 +93,7 @@ function click_letras(event) {
         id('mensajeResultado').innerHTML = "¡Perdiste!, la palabra secreta era " + palabrita;
         id('frase').innerHTML = "Si la vida no te sonrie, Agregale mas Fruta";
         botonPalabra.disabled = false;
+        console.log("perdio")
         ventana()
         finalizarJuego()
     } else if (cantidadAciertos == palabrita.length) {
@@ -120,6 +123,50 @@ function ventana() {
     body.style.height = "100%";
     body.style.overflow = "hidden";
 
+
+    span.onclick = function () {
+        modal.style.display = "none";
+
+        body.style.position = "inherit";
+        body.style.height = "auto";
+        body.style.overflow = "visible";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+
+            body.style.position = "inherit";
+            body.style.height = "auto";
+            body.style.overflow = "visible";
+        }
+    }
+}
+
+botonAgregarPVentana.addEventListener("click", function (event) {
+    alert("dad");
+    var palabrasnuevas = palabranueva();
+    palabras.push(palabrasnuevas)
+    console.log(palabrasnuevas)
+    console.log(palabras);
+});
+function palabranueva() {
+    var palabranueva = document.querySelector("#cajapalabranueva");
+    return palabranueva.value;
+}
+if (document.getElementById("btnagregar")) {
+    var modal = document.getElementById("my1Modal");
+    var btn = document.getElementById("btnagregar");
+    var span = document.getElementsByClassName("close1")[0];
+    var body = document.getElementsByTagName("body")[0];
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+
+        body.style.position = "static";
+        body.style.height = "100%";
+        body.style.overflow = "hidden";
+    }
 
     span.onclick = function () {
         modal.style.display = "none";
