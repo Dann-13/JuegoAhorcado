@@ -214,3 +214,21 @@ body{
     cursor: pointer;
 
 }
+@media screen and (max-width: 400px){
+    .botoninicio{
+        margin-left: 25%;
+    }
+    .botonagregar{
+        margin: 10%;
+    }
+    .img {
+        height: 300px;
+    }
+    .palabras{
+        width: 95%;
+    }
+    #letras{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
