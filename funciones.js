@@ -6,3 +6,4 @@ function obtenerRamdom(num_min, mun_max){
 function id(str){
     return document.getElementById(str);
 }
+
