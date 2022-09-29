@@ -30,7 +30,6 @@ function ventana() {
 }
 //ventana palabra nueva
 if (document.getElementById("btnagregar")) {
-    console.log("52")
     var modal = document.getElementById("my1Modal");
     var btn = document.getElementById("btnagregar");
     var span = document.getElementsByClassName("close1")[0];

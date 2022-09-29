@@ -114,8 +114,8 @@ function finalizarJuego() {
 }
 
 botonAgregarPVentana.addEventListener("click", function (event) {
-    alert("dad");
     var palabrasnuevas = palabranueva();
+    id('mensajePaNueva').innerHTML = "La palabra que agregaste fue: " + palabrasnuevas;
     palabras.push(palabrasnuevas)
     console.log(palabrasnuevas)
     console.log(palabras);
