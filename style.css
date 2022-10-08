@@ -1,20 +1,37 @@
-body{
-    background-color: #EFF1FA;
+body {
+    background-color: #000000;
     margin: 0px;
+    background-image: url(img/1.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.contenedorBotones {
-    width: 80%;
-    position: absolute;
-	height: 150px;
-	left: 50%;
-	top: 50%;
-	margin-top: -100px;
-	margin-left: -150px;
+
+.titulo {
+    font-family: 'Henny Penny', cursive;
+    font-size: 100px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FF72BF, 0 0 30px #FF72BF, 0 0 40px #FF72BF, 0 0 55px #FF72BF, 0 0 75px #FF72BF, -40px -3px 20px rgba(191,29,206,0);
+
+}
+.contenedorBotones{
+    text-align: center;
+}
+.contenido {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .botoninicio {
-    background-color: #0A3871;
-    color: #fff;
+    background-color: #42B2F6;
+    color: #000;
     font-size: 25px;
     border-radius: 15px;
     padding: 10px 30px 10px 30px;
@@ -23,15 +40,17 @@ body{
     transition: all 1s ease;
 
 }
-.botoninicio:hover{
+
+.botoninicio:hover {
     background-color: #fff;
     color: #0A3871;
     border-color: #0A3871;
     font-size: 30px;
 }
+
 .botonagregar {
     border: 0;
-    color: #0A3871;
+    color: #000;
     font-size: 25px;
     border-radius: 15px;
     padding: 10px 30px 10px 30px;
@@ -39,8 +58,9 @@ body{
     cursor: pointer;
     transition: all 1s ease;
 }
-.botonagregar:hover{
-    background-color: #0A3871;
+
+.botonagregar:hover {
+    background-color: #1CB2ED;
     color: #fff;
     font-size: 30px;
 }
@@ -48,6 +68,7 @@ body{
 #contenido-oculto {
     display: none;
 }
+
 /*Estilos ventana agregar palabra*/
 .modalContainer {
     display: none;
@@ -59,8 +80,8 @@ body{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modalContainer .modal-content {
@@ -86,33 +107,40 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
-.tituloVnPalabra{
+
+.tituloVnPalabra {
     font-family: 'Akaya Telivigala', cursive;
     font-size: 30px;
 }
-.parrafoVnPalabra{
+
+.parrafoVnPalabra {
     font-family: 'Akaya Telivigala', cursive;
     font-size: 20px;
 }
-#cajapalabranueva{
+
+#cajapalabranueva {
     display: block;
     margin-bottom: 15px;
     font-family: 'Akaya Telivigala', cursive;
 }
-#agregar{
+
+#agregar {
     padding: 10px;
     font-family: 'Akaya Telivigala', cursive;
     font-size: 18px;
 }
+
 /*Estilos del juego*/
-#imagen-ahorcado{
+#imagen-ahorcado {
     width: 50%;
     margin: 0 auto;
 }
-.img{
+
+.img {
     height: 400px;
 }
-#botonPalabra{
+
+#botonPalabra {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -121,26 +149,31 @@ body{
     cursor: pointer;
 
 }
-.botonPalabraclass:hover{
+
+.botonPalabraclass:hover {
     background-color: #0A3871;
     color: #fff;
 }
-.botonobtenerpalabra{
+
+.botonobtenerpalabra {
     margin: 0 auto;
     width: 50%;
     text-align: center;
 }
-.palabras{
+
+.palabras {
     width: 50%;
     margin: 0 auto;
 }
-#palabraAdivinar{
+
+#palabraAdivinar {
     text-align: center;
     height: 3em;
     font-size: 25px;
     font-family: 'Akaya Telivigala', cursive;
 }
-#palabraAdivinar span{
+
+#palabraAdivinar span {
     vertical-align: bottom;
     font-size: 2em;
     border-bottom: 2px solid #0A3871;
@@ -162,7 +195,7 @@ body{
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modalContainer .modal-content {
@@ -181,25 +214,30 @@ body{
     font-size: 28px;
     font-weight: bold;
 }
-#mensajeResultado{
+
+#mensajeResultado {
     text-align: center;
     font-family: 'Akaya Telivigala', cursive;
 }
-#frase{
+
+#frase {
     font-family: 'Akaya Telivigala', cursive;
 }
+
 .modalContainer .close:hover,
 .modalContainer .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
+
 /*Botones*/
-.botones{
+.botones {
     width: 50%;
     margin: 0 auto;
 }
-#letras{
+
+#letras {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -207,27 +245,32 @@ body{
     justify-content: center;
     margin-bottom: 50px;
 }
-#letras button{
+
+#letras button {
     padding: 10px 10px;
     font-size: 20px;
     font-family: 'Akaya Telivigala', cursive;
     cursor: pointer;
 
 }
-@media screen and (max-width: 400px){
-    .botoninicio{
-        margin-left: 25%;
+
+@media screen and (max-width: 450px) {
+    .titulo{
+        font-size: 75px;
     }
-    .botonagregar{
-        margin: 10%;
+    .botoninicio{
+        width: 50%;
+        margin-bottom: 15px;
     }
     .img {
         height: 300px;
     }
-    .palabras{
+
+    .palabras {
         width: 95%;
     }
-    #letras{
+
+    #letras {
         width: 95%;
         margin: 0 auto;
     }

@@ -29,7 +29,7 @@ const img = id('imagen');
 //mostrando el juego
 function mostrarContenido() {
     id('contenido-oculto').style.display = 'block';
-    id('contenedor-Botones').style.display = 'none';
+    id('contenido-inicio').style.display = 'none';
 }
 botonIniciar.addEventListener("click", function (event) {
     mostrarContenido();

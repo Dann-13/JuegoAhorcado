@@ -6,25 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto&family=Work+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <script src="funciones.js"></script>
     <title>Juego del Ahorcado</title>
 </head>
 
 <body>
     <main>
-        <div class="contenido">
-            <div id="contenedor-Botones" class="contenedorBotones">
-                <input type="button" value="Iniciar" id="iniciarjuego" class="botoninicio">
-                <input type="button" value="Agregar Palabra" id="btnagregar" class="botonagregar">
-                <div id="my1Modal" class="modalContainer">
-                    <div class="modal-content">
-                        <span class="close1">×</span>
-                        <h2 class="tituloVnPalabra">¡Puedes Agreagar una palabra nueva!</h2>
-                        <p class="parrafoVnPalabra">No prometo que salga a la primera!</p>
-                        <p id="mensajePaNueva"></p>
-                        <input type="textarea" name="" id="cajapalabranueva">
-                        <input type="button" value="Agregar" id="agregar">
+        <div class="contenido" id="contenido">
+            <div id="contenido-inicio">
+                <p class="titulo">Ahorcado</p>
+                <div id="contenedor-Botones" class="contenedorBotones">
+                    <input type="button" value="Iniciar" id="iniciarjuego" class="botoninicio">
+                    <input type="button" value="Agregar Palabra" id="btnagregar" class="botonagregar">
+                    <div id="my1Modal" class="modalContainer">
+                        <div class="modal-content">
+                            <span class="close1">×</span>
+                            <h2 class="tituloVnPalabra">¡Puedes Agreagar una palabra nueva!</h2>
+                            <p class="parrafoVnPalabra">No prometo que salga a la primera!</p>
+                            <p id="mensajePaNueva"></p>
+                            <input type="textarea" name="" id="cajapalabranueva">
+                            <input type="button" value="Agregar" id="agregar">
+                        </div>
                     </div>
                 </div>
             </div>
