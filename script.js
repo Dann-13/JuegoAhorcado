@@ -37,7 +37,7 @@ botonIniciar.addEventListener("click", function (event) {
 });
 //Click en obtener Palabra O Iniciar Juego
 botonPalabra.addEventListener("click", function (event) {
-    imagen.src = 'img/img0.svg';
+    imagen.src = '/assets/img/img0.svg';
     botonPalabra.disabled = true;
     console.log(botonPalabra)
     cantidadErrores = 0; //para que cada vez que vuelva a jugar inicie en 0
@@ -83,7 +83,7 @@ function click_letras(event) {
     }
     if (acerto == false) {
         cantidadErrores++;
-        const source = `img/img${cantidadErrores}.svg`;
+        const source = `/assets/img/img${cantidadErrores}.svg`;
         console.log(source)
         const img = id('imagen');
         img.src = source;

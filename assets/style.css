@@ -1,7 +1,7 @@
 body {
     background-color: #000000;
     margin: 0px;
-    background-image: url(img/1.jpg);
+    background-image: url(/assets/img/fondo.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -176,12 +176,13 @@ body {
 #palabraAdivinar span {
     vertical-align: bottom;
     font-size: 2em;
-    border-bottom: 2px solid #0A3871;
+    border-bottom: 2px solid white;
     width: 30px;
     text-align: center;
     margin-right: 6px;
     display: inline-block;
     text-align: center;
+    color: #fff;
 }
 
 /*Ventana Modal*/
@@ -253,6 +254,8 @@ body {
     cursor: pointer;
 
 }
+
+
 
 @media screen and (max-width: 450px) {
     .titulo{
