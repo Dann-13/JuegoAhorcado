@@ -15,12 +15,14 @@ body {
     color: #ffffff;
     text-align: center;
     margin-bottom: 10px;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FF72BF, 0 0 30px #FF72BF, 0 0 40px #FF72BF, 0 0 55px #FF72BF, 0 0 75px #FF72BF, -40px -3px 20px rgba(191,29,206,0);
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FF72BF, 0 0 30px #FF72BF, 0 0 40px #FF72BF, 0 0 55px #FF72BF, 0 0 75px #FF72BF, -40px -3px 20px rgba(191, 29, 206, 0);
 
 }
-.contenedorBotones{
+
+.contenedorBotones {
     text-align: center;
 }
+
 .contenido {
     height: 100vh;
     display: flex;
@@ -45,7 +47,7 @@ body {
     background-color: #fff;
     color: #0A3871;
     border-color: #0A3871;
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .botonagregar {
@@ -61,73 +63,12 @@ body {
 
 .botonagregar:hover {
     background-color: #1CB2ED;
-    color: #fff;
-    font-size: 30px;
+    color: #000;
+    font-size: 26px;
 }
 
 #contenido-oculto {
     display: none;
-}
-
-/*Estilos ventana agregar palabra*/
-.modalContainer {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modalContainer .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid lightgray;
-    border-top: 10px solid #58abb7;
-    width: 60%;
-}
-
-.modalContainer .close1 {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.modalContainer .close:hover,
-.modalContainer .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.tituloVnPalabra {
-    font-family: 'Akaya Telivigala', cursive;
-    font-size: 30px;
-}
-
-.parrafoVnPalabra {
-    font-family: 'Akaya Telivigala', cursive;
-    font-size: 20px;
-}
-
-#cajapalabranueva {
-    display: block;
-    margin-bottom: 15px;
-    font-family: 'Akaya Telivigala', cursive;
-}
-
-#agregar {
-    padding: 10px;
-    font-family: 'Akaya Telivigala', cursive;
-    font-size: 18px;
 }
 
 /*Estilos del juego*/
@@ -137,7 +78,7 @@ body {
 }
 
 .img {
-    height: 400px;
+    height: 300px;
 }
 
 #botonPalabra {
@@ -151,8 +92,8 @@ body {
 }
 
 .botonPalabraclass:hover {
-    background-color: #0A3871;
-    color: #fff;
+    background-color: #1CB2ED;
+    color: #000;
 }
 
 .botonobtenerpalabra {
@@ -185,37 +126,6 @@ body {
     color: #fff;
 }
 
-/*Ventana Modal*/
-.modalContainer {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modalContainer .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid lightgray;
-    border-top: 10px solid #0A3871;
-    width: 60%;
-    border-radius: 15px;
-}
-
-.modalContainer .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
 #mensajeResultado {
     text-align: center;
     font-family: 'Akaya Telivigala', cursive;
@@ -223,19 +133,6 @@ body {
 
 #frase {
     font-family: 'Akaya Telivigala', cursive;
-}
-
-.modalContainer .close:hover,
-.modalContainer .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/*Botones*/
-.botones {
-    width: 50%;
-    margin: 0 auto;
 }
 
 #letras {
@@ -255,16 +152,52 @@ body {
 
 }
 
+.errPoint {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    transform: translate(0, 0);
+    background-color: #f1f1f1;
+    padding: 0 15px 0 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    animation: neonBorder 1s infinite alternate;
+}
 
+#err {
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 17px;
+    font-family: 'Londrina Solid', cursive;
+    text-align: center;
+}
+.pContador{
+    font-family: 'Londrina Solid', cursive;
+    font-size: 17px;
+}
+
+@keyframes neonBorder {
+    0% {
+        box-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #1FDFEA, 0 0 10px #1FDFEA, 0 0 15px #1FDFEA, 0 0 25px #1FDFEA, 0 0 25px #1FDFEA, 0 0 35px #1FDFEA;
+    }
+
+    100% {
+        box-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 5px #FF70B8, 0 0 10px #FF70B8, 0 0 15px #1FDFEA, 0 0 25px #1FDFEA, 0 0 25px #FE71BC, 0 0 35px #FE71BC;
+    }
+}
 
 @media screen and (max-width: 450px) {
-    .titulo{
+    .titulo {
         font-size: 75px;
     }
-    .botoninicio{
+
+    .botoninicio {
         width: 50%;
         margin-bottom: 15px;
     }
+
     .img {
         height: 300px;
     }

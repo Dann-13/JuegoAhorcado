@@ -24,6 +24,7 @@ var botonPalabra = document.querySelector('#botonPalabra');
 var btn_letras = document.querySelectorAll("#letras button");
 var btn_agregarPalabra = document.querySelector('#agregar');
 var botonAgregarPVentana = document.querySelector('#agregar')
+let mostrarErrores = document.querySelector('#err');
 const img = id('imagen');
 
 //mostrando el juego
@@ -33,13 +34,14 @@ function mostrarContenido() {
 }
 botonIniciar.addEventListener("click", function (event) {
     mostrarContenido();
-    btn_letras.disabled = true;
+    for (let i = 0; i < btn_letras.length; i++) {
+        btn_letras[i].disabled = true;
+    }
 });
 //Click en obtener Palabra O Iniciar Juego
 botonPalabra.addEventListener("click", function (event) {
     imagen.src = '/assets/img/img0.svg';
     botonPalabra.disabled = true;
-    console.log(botonPalabra)
     cantidadErrores = 0; //para que cada vez que vuelva a jugar inicie en 0
     cantidadAciertos = 0;
     var parrafo = id("palabraAdivinar");
@@ -49,8 +51,6 @@ botonPalabra.addEventListener("click", function (event) {
     var numPalabras = palabras.length;
     var valor_al_azar = obtenerRamdom(0, numPalabras)
     palabrita = palabras[valor_al_azar];
-    console.log(palabrita);
-
     var cantidad_letras = palabrita.length;
     for (let i = 0; i < btn_letras.length; i++) { //servira para habilitar las letras cada ves que le demos click a obtener palabra
         btn_letras[i].disabled = false;
@@ -84,16 +84,17 @@ function click_letras(event) {
     if (acerto == false) {
         cantidadErrores++;
         const source = `/assets/img/img${cantidadErrores}.svg`;
-        console.log(source)
         const img = id('imagen');
         img.src = source;
+        mostrarErrores.innerHTML = cantidadErrores;
 
     }
     if (cantidadErrores == 7) {
         id('mensajeResultado').innerHTML = "¡Perdiste!, la palabra secreta era " + palabrita;
         id('frase').innerHTML = "Si la vida no te sonrie, Agregale mas Fruta";
         botonPalabra.disabled = false;
-        console.log("perdio")
+        cantidadErrores = 0;
+        mostrarErrores.innerHTML = "0";
         ventana()
         finalizarJuego()
     } else if (cantidadAciertos == palabrita.length) {
@@ -103,7 +104,6 @@ function click_letras(event) {
         ventana()
         finalizarJuego()
     }
-    console.log("la letra " + letra + " en la palabra " + "¿Existe? " + acerto);
 }
 //para finalizar juego
 function finalizarJuego() {
@@ -117,8 +117,6 @@ botonAgregarPVentana.addEventListener("click", function (event) {
     var palabrasnuevas = palabranueva();
     id('mensajePaNueva').innerHTML = "La palabra que agregaste fue: " + palabrasnuevas;
     palabras.push(palabrasnuevas)
-    console.log(palabrasnuevas)
-    console.log(palabras);
 });
 function palabranueva() {
     var palabranueva = document.querySelector("#cajapalabranueva");

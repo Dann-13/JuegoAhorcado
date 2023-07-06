@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/styleModal.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Roboto&family=Work+Sans:wght@300&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
     <script src="/assets/js/funciones.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet"> 
     <title>Juego del Ahorcado</title>
 </head>
 
@@ -37,6 +39,10 @@
             <div id="contenido-oculto">
                 <div id="imagen-ahorcado">
                     <img src="/assets/img/img0.svg" alt="imagen0" class="img" id="imagen">
+                </div>
+                <div class="errPoint">
+                    <p class="pContador">Errores</p>
+                    <p id="err"></p>
                 </div>
                 <div class="botonobtenerpalabra">
                     <input type="button" value="Obtener Palabra" id="botonPalabra" class="botonPalabraclass">
@@ -82,6 +88,7 @@
                     <button>y</button>
                     <button>z</button>
                 </div>
+               
             </div>
         </div>
     </main>
